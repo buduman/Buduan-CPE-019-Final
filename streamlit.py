@@ -17,7 +17,7 @@ from PIL import Image, ImageOps
 import numpy as np
 
 def import_and_predict(image_data, model):
-    size = (28, 28)
+    size = (69, 69)
     image = ImageOps.fit(image_data, size, Image.Resampling.LANCZOS)
     img = np.asarray(image).astype(np.float32) / 255.0
     img_reshape = np.expand_dims(img, axis=0)
